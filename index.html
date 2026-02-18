@@ -78,7 +78,7 @@
 		<div class="row">
 			<div class="item">
 				<div class="item-text">
-					<span>AWS / GCloud / Docker / Kubernetes</span>
+					<span>AWS / GCloud</span>
 					<span class="w-90">90%</span>
 				</div>
 				<div class="progress">
@@ -163,63 +163,57 @@
 			</div>
 		</div>
 	</section>
-	<section class="projects" id="projects">
-		<h1 class="heading">Proj<span>ects</span></h1>
-		<div class="project-card">
-			<div class="project-text">
-				<h2>To<span>do</span></h2>
-			</div>
-			<div class="project-demo">
-				<video src="./css/tododemo.mp4" controls></video>
-			</div>
-			<div class="project-text">
+
+	<!-- experience section -->
+	<section class="experience" id="experience">
+		<h1 class="heading">Expe<span>rience</span></h1>
+
+		<div class="box-container">
+
+			<!-- Software Engineer -->
+			<div class="box">
+				<i class="fas fa-briefcase"></i>
+				<span>June 2024 – Present</span>
+				<h3>Software Engineer</h3>
+				<h4>Infraspec</h4>
 				<ul>
-					<li class="project-heading">
-						An Andriod app which allows users to create, delete, update todos
-						and to mark todos as completed.
+					<li><strong>LG Ad Solutions:</strong> Improved AWS infrastructure, enhanced on-prem observability,
+						implemented IAM authentication for Go & JS libraries, executed Keycloak cutover strategy
+						(multi-env), integrated secret management, performed HDFS→S3 backup, handled production on-call.
 					</li>
-					<li>Used Firebase Auth for Authentication.</li>
-					<li>Used Cloud Firestore for query and to store data.</li>
-					<li class="poject-show-code-btn">
-						<a class="btn" href="https://github.com/rohit-500/Todo" target="_blank">view code</a>
-					</li>
+
+					<li><strong>Glomopay:</strong> Migrated infra to fully automated Google Cloud setup, built CI/CD
+						pipelines, Dockerized services, integrated OpenTelemetry for observability.</li>
+
+					<li><strong>Picfusion:</strong> Contributed to text-to-image & custom model training platform,
+						built UI features, enabled async training jobs, added job limits per user, introduced social
+						sharing feature.</li>
+
+					<li><strong>ECS Kong Module :</strong> Developed Terraform module for ECS Kong, streamlined API
+						gateway deployment, improved service discovery, routing & load balancing.</li>
 				</ul>
 			</div>
-		</div>
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<div class="project-card">
-			<div class="project-text">
-				<h2>CF&nbsp;<span>Analytics</span></h2>
-			</div>
-			<div class="project-demo">
-				<video src="./css/cfdemo.mp4" controls></video>
-			</div>
-			<div class="project-text">
+
+			<!-- Intern -->
+			<div class="box">
+				<i class="fas fa-briefcase"></i>
+				<span>Jan 2024 – April 2024</span>
+				<h3>Software Engineer Intern</h3>
+				<h4>Infraspec</h4>
 				<ul>
-					<li class="project-heading">
-						An interface which will given an option to see contests, search
-						users and to see their statistics.
-					</li>
-					<li>Used Provider for State Management.</li>
-					<li>Used Cloud Firestore to store data.</li>
-					<li>Used Flutter Local Notifications for Notifications.</li>
-					<li class="poject-show-code-btn">
-						<a class="btn" href="https://github.com/rohit-500/CF-Analytics" target="_blank">view code</a>
-					</li>
+					<li><strong>PXE Boot Raspberry Pi:</strong> Worked on PXE boot setup, networking & automation,
+						developed Bash scripts for streamlined provisioning.</li>
+
+					<li><strong>Discord Bot Development:</strong> Built custom Discord bot using JavaScript, improved
+						task management, implemented CI/CD, deployed via Docker container.</li>
+
+					<li><strong>Technical Blogging:</strong> Authored blogs on PXE boot & automation setup for Raspberry
+						Pi.</li>
 				</ul>
 			</div>
+
 		</div>
 	</section>
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
 
 	<!-- contact section -->
 	<section class="contact" id="contact">
@@ -238,28 +232,44 @@
 	</section>
 	<footer>
 		<div class="copyright">
-			<p>Copyright @ 2022 Rohit, All Rights Reserved.</p>
+			<p>Copyright @ 2026 Rohit, All Rights Reserved.</p>
 		</div>
 	</footer>
 
+
+	
 	<script>
 		const scriptURL =
-			"https://script.google.com/macros/s/AKfycbzV69leu7gxI3A-l4P2rvFSNmllZUuq__AuNa_AzykcbNeEChSOkm2UsX5M91310kmAhQ/exec";
+			"https://script.google.com/macros/s/AKfycbwf8kEMZ6PO4RboP3mJxxgMYMS-pyiM_dQ2oiuccuTpKuvO4Y0BeR0uqz_tXhzMFPQ1/exec";
+	
 		const form = document.forms["google-sheet"];
-
+		const submitBtn = document.getElementById("sub1");
+	
 		form.addEventListener("submit", (e) => {
 			e.preventDefault();
-			fetch(scriptURL, { method: "POST", body: new FormData(form) })
-				.then(
-					(response) =>
-						alert("Thanks for Contacting me..! I Will Contact You Soon..."),
-
-					document.getElementById("myform").reset()
-				)
-
-				.catch((error) => console.error("Error!", error.message));
+	
+			submitBtn.disabled = true;
+			submitBtn.value = "Sending...";
+	
+			fetch(scriptURL, {
+				method: "POST",
+				body: new FormData(form)
+			})
+			.then((response) => {
+				alert("Thanks for Contacting me..! I Will Contact You Soon...");
+				form.reset();
+			})
+			.catch((error) => {
+				console.error("Error!", error.message);
+				alert("Something went wrong. Please try again.");
+			})
+			.finally(() => {
+				submitBtn.disabled = false;
+				submitBtn.value = "Send";
+			});
 		});
 	</script>
+	
 	<script src="https://unpkg.com/scrollreveal"></script>
 
 	<script type="text/javascript" src="javascript/script.js"></script>
