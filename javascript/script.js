@@ -376,7 +376,7 @@ copyEmail.addEventListener('click', async (e) => {
 
 // ---- Contact form → Google Apps Script → Google Sheet
 const scriptURL =
-    'https://script.google.com/macros/s/AKfycbwf8kEMZ6PO4RboP3mJxxgMYMS-pyiM_dQ2oiuccuTpKuvO4Y0BeR0uqz_tXhzMFPQ1/exec';
+    'https://script.google.com/macros/s/AKfycbxuvaJm9nkecAH0e5PBLDDj1bIjZuwXbYovG4kVI9F1bNSfhnciSVu2z21Xo-2SqUQz/exec';
 
 const form = document.forms['google-sheet'];
 const submitBtn = document.getElementById('sub1');
