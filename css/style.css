@@ -1387,6 +1387,15 @@ mark {
     background: var(--surface);
 }
 
+/* Spam honeypot: hidden from people, visible to naive bots */
+.hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 .contact-intro {
     margin-bottom: 1.5rem;
     color: var(--muted);
