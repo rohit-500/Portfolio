@@ -3,276 +3,505 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="keywords"
-		content="portfolio,rohit,rohitnagmoti,Rohit,Rohitnagmoti,kls git,codechef,Rohit Nagmoti,linkedin" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="Rohit Nagmoti — Software Engineer (DevOps & Platform Engineering) at Infraspec, working on cloud infrastructure, automation, observability and reliability." />
+	<meta name="keywords"
+		content="portfolio,rohit,rohitnagmoti,Rohit,Rohitnagmoti,kls git,codechef,Rohit Nagmoti,linkedin,devops,terraform,aws,gcp" />
+	<meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)" />
+	<meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)" />
 	<title>Rohit Nagmoti</title>
 	<link rel="icon" type="image/x-icon" href="./images/icon.ico" />
-	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
-	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- Apply the saved theme before first paint to avoid a light/dark flash -->
+	<script>
+		(function () {
+			document.documentElement.classList.add("js");
+			try {
+				var saved = localStorage.getItem("theme");
+				if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
+			} catch (e) { }
+		})();
+	</script>
+
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Raleway:wght@200&family=Rubik:ital,wght@0,300;0,500;0,600;0,900;1,300&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
 		rel="stylesheet" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-	<!-- header section -->
-	<header>
-		<a href="#" class="logo">Port<span>folio</span></a>
+	<a class="skip-link" href="#main">Skip to content</a>
 
-		<div id="menu-icon" class="bx bx-menu"></div>
-		<ul class="navbar">
-			<li><a href="#home">Home</a></li>
-			<li><a href="#education">About</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
+	<header class="masthead">
+		<div class="masthead-inner">
+			<a href="#top" class="logo" aria-label="Rohit Nagmoti — back to top">
+				<span class="logo-mark">RN</span>
+				<span class="logo-name">Rohit Nagmoti</span>
+			</a>
+
+			<nav class="navbar" id="navbar" aria-label="Sections">
+				<a href="#experience">Experience</a>
+				<a href="#projects">Projects</a>
+				<a href="#blog">Blog</a>
+				<a href="#skills">Skills</a>
+				<a href="#achievements">Achievements</a>
+				<a href="#education">Education</a>
+				<a href="#contact">Contact</a>
+			</nav>
+
+			<div class="masthead-actions">
+				<button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+					<svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+						<path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z" />
+					</svg>
+					<svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+						<circle cx="12" cy="12" r="4.2" />
+						<path
+							d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" />
+					</svg>
+				</button>
+				<button class="icon-btn menu-toggle" id="menu-icon" type="button" aria-label="Open menu"
+					aria-expanded="false" aria-controls="navbar">
+					<span></span><span></span>
+				</button>
+			</div>
+		</div>
+		<div class="progress" id="progress" aria-hidden="true"></div>
 	</header>
-	<!-- home section -->
-	<section class="home" id="home">
-		<div class="home-text">
-			<h5>Hello, I am</h5>
-			<h1 class="typed-out">Rohit Nagmoti</h1>
-			<h6>I Am A Keen <span>Learner.</span></h6>
-			<p>
-				Computer Science graduate passionate about cloud infrastructure,
-				DevOps automation, and scalable backend systems. Currently working on
-				AWS and Google Cloud infrastructure, CI/CD pipelines, observability with
-				OpenTelemetry, and microservices architecture. I enjoy solving complex
-				problems and building reliable, production-ready systems.
-			</p>
-			<a href="https://drive.google.com/file/d/1ajfGJ8qU53skAWKLOd3RG8lOuSibXOFL/view?usp=drive_link"
-				class="btn">View Resume</a>
-		</div>
-		<div class="home-img rohit">
-			<img src="images/img/hom4.png" />
-		</div>
-	</section>
-	<!-- about section  -->
 
-	<section class="education" id="education">
-		<h1 class="heading edu">Edu<span>cation</span></h1>
-
-		<div class="box-container">
-			<div class="box" id="uni">
-				<i class="fas fa-graduation-cap"></i>
-				<span>2020-2024</span>
-				<h3>Bachelor of Engineering in Computer Science</h3>
-				<h4>KLS Gogte Institute of Technology</h4>
-				<p>CGPA&nbsp;:&nbsp;9.63</p>
-			</div>
-
-			<div class="box" id="pre">
-				<i class="fas fa-graduation-cap"></i>
-				<span>2018-2020</span>
-				<h3>Pre-University</h3>
-				<h4>SGV Mahesh PU College</h4>
-				<p>Grade &nbsp;:&nbsp;92.6%</p>
-			</div>
-		</div>
-		<h1 class="heading skills">Sk<span>ills</span></h1>
-		<div class="row">
-			<div class="item">
-				<div class="item-text">
-					<span>AWS / GCloud</span>
-					<span class="w-90">90%</span>
+	<main id="main">
+		<!-- hero -->
+		<section class="hero wrap" id="top">
+			<div class="hero-fx" id="hero-fx" aria-hidden="true"></div>
+			<div class="hero-grid">
+				<div class="hero-text">
+					<p class="status"><span class="status-dot" aria-hidden="true"></span>Software Engineer at
+						Infraspec &middot; Bengaluru</p>
+					<h1 class="hero-name">Hi, I&rsquo;m <span class="nowrap">Rohit <span class="wave" aria-hidden="true">👋</span></span></h1>
+					<p class="hero-tagline">
+						I build reliable
+						<span class="rotator" aria-hidden="true"><span id="rotator-word">cloud infrastructure</span><span
+								class="caret"></span></span>
+						<span class="sr-only">cloud infrastructure, CI/CD pipelines, Terraform modules and observability
+							stacks</span>
+					</p>
+					<p class="hero-lede">
+						DevOps &amp; Platform Engineer working across AWS and Google Cloud &mdash; Terraform,
+						Kubernetes, CI/CD, OpenTelemetry and the occasional 2&nbsp;a.m. on-call. I like turning
+						manual, fragile setups into automated, observable, boring-in-a-good-way systems.
+					</p>
+					<div class="hero-actions">
+						<a href="https://drive.google.com/file/d/1ajfGJ8qU53skAWKLOd3RG8lOuSibXOFL/view?usp=drive_link"
+							class="btn btn-primary" target="_blank" rel="noopener">View résumé <span
+								class="arrow" aria-hidden="true">&nearr;</span></a>
+						<a href="#contact" class="btn btn-ghost">Get in touch</a>
+						<a href="https://www.linkedin.com/in/rohit-nagmoti-6a878a214/" class="btn btn-icon" target="_blank"
+							rel="noopener" aria-label="LinkedIn profile">
+							<svg viewBox="0 0 24 24" aria-hidden="true">
+								<path
+									d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.55 4.77 5.87v5.58h-4v-4.95c0-1.18-.02-2.7-1.7-2.7-1.7 0-1.95 1.28-1.95 2.6v5.05h-4v-11Z" />
+							</svg>
+						</a>
+					</div>
 				</div>
-				<div class="progress">
-					<div class="progress-bar progress-bar90 anim"></div>
+
+				<div class="portrait" id="portrait">
+					<img src="images/img/hom4.png" alt="Portrait of Rohit Nagmoti" width="1028" height="1026" />
 				</div>
 			</div>
 
-			<div class="item">
-				<div class="item-text">
-					<span>Java / Go / JavaScript</span>
-					<span class="w-90">90%</span>
-				</div>
-				<div class="progress">
-					<div class="progress-bar progress-bar90"></div>
+		</section>
+
+		<!-- divider -->
+		<div class="divider wrap reveal" aria-hidden="true"><span>✦</span></div>
+
+		<!-- experience -->
+		<section class="section wrap" id="experience">
+			<header class="section-head">
+				<span class="section-index">01</span>
+				<h2 class="section-title">Experience</h2>
+			</header>
+
+			<div class="section-body">
+				<article class="role reveal">
+					<div class="role-head">
+						<div>
+							<h3>Software Engineer <span class="muted">&middot; Infraspec</span></h3>
+							<p class="role-sub">DevOps &amp; Platform Engineering &middot; Bengaluru, Karnataka</p>
+						</div>
+						<span class="role-date">Jun 2024 &ndash; Present</span>
+					</div>
+
+					<div class="client">
+						<h4><span class="client-dot" style="--c: var(--c-pink)"></span>LG Ad Solutions</h4>
+						<ul class="bullets">
+							<li>Enhanced on-prem monitoring and alerting and led root-cause analysis, cutting incident
+								response from <mark>~10 days to 1 day</mark> and resolution from ~3 days to 2.</li>
+							<li>Saved <mark>$60K+</mark> in infrastructure costs by replacing third-party backup tooling
+								with AWS DataSync-based HDFS and Ceph backups to Amazon S3.</li>
+							<li>Restored business continuity by fixing <mark>15+ database backup workflows</mark> and
+								adding backup coverage for critical HDFS, Ceph and database systems.</li>
+							<li>Implemented IAM authentication in Go and JavaScript libraries for secure AWS migrations;
+								executed a multi-environment Keycloak cutover and integrated secret management.</li>
+							<li>Supported Jenkins CI/CD workflows, wrote <mark>60+ operational runbooks</mark> and handled
+								production on-call.</li>
+						</ul>
+					</div>
+
+					<div class="client">
+						<h4><span class="client-dot" style="--c: var(--c-green)"></span>Glomopay</h4>
+						<ul class="bullets">
+							<li>Migrated infrastructure from manual setup to <mark>Terraform-based IaC on Google
+									Cloud</mark>, with reusable Terraform modules and custom Packer images.</li>
+							<li>Built CI/CD pipelines for infrastructure and applications and Dockerized services.</li>
+							<li>Implemented OpenTelemetry monitoring for better visibility, troubleshooting and debugging
+								across cloud workloads.</li>
+						</ul>
+					</div>
+				</article>
+
+				<article class="role reveal">
+					<div class="role-head">
+						<div>
+							<h3>Software Engineer Intern <span class="muted">&middot; Infraspec</span></h3>
+							<p class="role-sub">Cloud &amp; DevOps &middot; Bengaluru, Karnataka</p>
+						</div>
+						<span class="role-date">Jan 2024 &ndash; Apr 2024</span>
+					</div>
+					<ul class="bullets">
+						<li>Built and managed AWS infrastructure with Terraform and supported Kubernetes-based
+							application deployment and automation.</li>
+						<li>Developed and containerized a JavaScript Discord bot with Docker and CI/CD for repeatable
+							deployments.</li>
+						<li>Worked on PXE boot automation for Raspberry Pi and authored technical blogs documenting the
+							setup.</li>
+					</ul>
+				</article>
+			</div>
+		</section>
+
+		<!-- projects -->
+		<section class="section wrap" id="projects">
+			<header class="section-head">
+				<span class="section-index">02</span>
+				<h2 class="section-title">Projects</h2>
+			</header>
+
+			<div class="section-body">
+				<div class="projects">
+					<article class="project spot reveal" style="--c: var(--c-pink)">
+						<span class="project-icon" aria-hidden="true">🎨</span>
+						<h3>Picfusion</h3>
+						<p class="project-kind">Text-to-image &amp; model training platform</p>
+						<p>Built UI features and async model-training and image-generation workflows using Celery task
+							queues with Redis, plus per-user job limits and social sharing &mdash; all in a containerized
+							Docker Compose setup on AWS.</p>
+						<ul class="tags">
+							<li>Python</li><li>Django</li><li>Celery</li><li>Redis</li><li>AWS</li><li>Docker</li>
+						</ul>
+					</article>
+
+					<article class="project spot reveal" style="--c: var(--c-orange)">
+						<span class="project-icon" aria-hidden="true">🦍</span>
+						<h3>ECS Kong Module</h3>
+						<p class="project-kind">Terraform module</p>
+						<p>A Terraform module for running the Kong API gateway on ECS &mdash; streamlining gateway
+							deployment and improving service discovery, routing and load balancing.</p>
+						<ul class="tags">
+							<li>Terraform</li><li>AWS ECS</li><li>Kong</li>
+						</ul>
+					</article>
+
+					<article class="project spot reveal" style="--c: var(--c-green)">
+						<span class="project-icon" aria-hidden="true">🍓</span>
+						<h3>PXE Boot Raspberry Pi</h3>
+						<p class="project-kind">Network boot automation</p>
+						<p>PXE boot automation for Raspberry Pi focused on networking and deployment workflows, with
+							Bash provisioning scripts and published blogs for community reuse.</p>
+						<ul class="tags">
+							<li>Linux</li><li>Networking</li><li>Bash</li>
+						</ul>
+					</article>
+
+					<article class="project spot reveal" style="--c: var(--c-blue)">
+						<span class="project-icon" aria-hidden="true">🤖</span>
+						<h3>Discord Bot</h3>
+						<p class="project-kind">Task management bot</p>
+						<p>A custom Discord bot that improves task management, shipped as a Docker container with a CI/CD
+							pipeline for repeatable deployments.</p>
+						<ul class="tags">
+							<li>JavaScript</li><li>Docker</li><li>CI/CD</li>
+						</ul>
+					</article>
 				</div>
 			</div>
+		</section>
 
-			<div class="item">
-				<div class="item-text">
-					<span>C / C++</span>
-					<span class="w-80">80%</span>
-				</div>
-				<div class="progress">
-					<div class="progress-bar progress-bar80"></div>
-				</div>
-			</div>
+		<!-- blog -->
+		<section class="section wrap" id="blog">
+			<header class="section-head">
+				<span class="section-index">03</span>
+				<h2 class="section-title">Blog</h2>
+			</header>
 
-			<div class="item">
-				<div class="item-text">
-					<span>HTML / CSS</span>
-					<span class="w-80">80%</span>
-				</div>
-				<div class="progress">
-					<div class="progress-bar progress-bar80"></div>
-				</div>
-			</div>
-
-			<div class="item">
-				<div class="item-text">
-					<span>Linux / Git</span>
-					<span class="w-80">80%</span>
-				</div>
-				<div class="progress">
-					<div class="progress-bar progress-bar80"></div>
-				</div>
-			</div>
-
-			<div class="item">
-				<div class="item-text">
-					<span>CI/CD</span>
-					<span class="w-80">80%</span>
-				</div>
-				<div class="progress">
-					<div class="progress-bar progress-bar80"></div>
-				</div>
-			</div>
-		</div>
-
-		<h1 class="heading codingprof">Coding<span> Profiles </span></h1>
-		<div class="card-container">
-			<div class="card">
-				<img src="./images/cc1.png" alt="CC" style="width: 40%" />
-				<h1 class="ccdes">4 star (max Rating.1904)</h1>
-				<p>
-					<a href="https://www.codechef.com/users/rohit_500" class="btn codebtn" target="_blank">View</a>
-				</p>
-			</div>
-			<div class="card">
-				<img src="./images/cf.png" alt="CF" style="width: 40%" />
-				<h1 class="ccdes">Pupil (max Rating.1219)</h1>
-				<p>
-					<a href="https://codeforces.com/profile/rohit_600?f0a28=1" class="btn codebtn"
-						target="_blank">View</a>
-				</p>
-			</div>
-			<div class="card">
-				<img src="./images/hr.png" alt="HR" style="width: 40%" />
-				<h1 class="ccdes">5 star (Problem Solving)</h1>
-				<p>
-					<a href="https://www.hackerrank.com/rohit_500" class="btn codebtn" target="_blank">View</a>
-				</p>
-			</div>
-		</div>
-	</section>
-
-	<!-- experience section -->
-	<section class="experience" id="experience">
-		<h1 class="heading">Expe<span>rience</span></h1>
-
-		<div class="box-container">
-
-			<!-- Software Engineer -->
-			<div class="box">
-				<i class="fas fa-briefcase"></i>
-				<span>June 2024 – Present</span>
-				<h3>Software Engineer</h3>
-				<h4>Infraspec</h4>
-				<ul>
-					<li><strong>LG Ad Solutions:</strong> Improved AWS infrastructure, enhanced on-prem observability,
-						implemented IAM authentication for Go & JS libraries, executed Keycloak cutover strategy
-						(multi-env), integrated secret management, performed HDFS→S3 backup, handled production on-call.
+			<div class="section-body">
+				<ul class="posts">
+					<li class="reveal">
+						<a class="post" href="https://www.infraspec.dev/blog/tag-strat-blog" target="_blank" rel="noopener">
+							<time class="post-date" datetime="2024-07-29">Jul 29, 2024</time>
+							<div class="post-main">
+								<h3>Essential AWS Tagging Strategies</h3>
+								<p>Enforcing mandatory tagging standards with Service Control Policies and Tag Policies for
+									better resource management, cost tracking and accountability.</p>
+							</div>
+							<span class="post-arrow" aria-hidden="true">&nearr;</span>
+						</a>
 					</li>
-
-					<li><strong>Glomopay:</strong> Migrated infra to fully automated Google Cloud setup, built CI/CD
-						pipelines, Dockerized services, integrated OpenTelemetry for observability.</li>
-
-					<li><strong>Picfusion:</strong> Contributed to text-to-image & custom model training platform,
-						built UI features, enabled async training jobs, added job limits per user, introduced social
-						sharing feature.</li>
-
-					<li><strong>ECS Kong Module :</strong> Developed Terraform module for ECS Kong, streamlined API
-						gateway deployment, improved service discovery, routing & load balancing.</li>
+					<li class="reveal">
+						<a class="post" href="https://www.infraspec.dev/blog/rpi-netboot-automation" target="_blank"
+							rel="noopener">
+							<time class="post-date" datetime="2024-04-17">Apr 17, 2024</time>
+							<div class="post-main">
+								<h3>Automated Netbooting for Raspberry Pi</h3>
+								<p>Automating Raspberry Pi netboot with a Bash script and MAC address tracking to streamline
+									provisioning over TFTP and NFS.</p>
+							</div>
+							<span class="post-arrow" aria-hidden="true">&nearr;</span>
+						</a>
+					</li>
+					<li class="reveal">
+						<a class="post" href="https://www.infraspec.dev/blog/rpi-netboot-deep-dive" target="_blank"
+							rel="noopener">
+							<time class="post-date" datetime="2024-04-16">Apr 16, 2024</time>
+							<div class="post-main">
+								<h3>PXE Boot Sequence Deep Dive</h3>
+								<p>How PXE lets Raspberry Pi devices boot over the network from a central server &mdash; no
+									SD cards required.</p>
+							</div>
+							<span class="post-arrow" aria-hidden="true">&nearr;</span>
+						</a>
+					</li>
 				</ul>
+				<p class="posts-note">Published on the <a href="https://www.infraspec.dev/blog" target="_blank"
+						rel="noopener">Infraspec blog</a>.</p>
 			</div>
+		</section>
 
-			<!-- Intern -->
-			<div class="box">
-				<i class="fas fa-briefcase"></i>
-				<span>Jan 2024 – April 2024</span>
-				<h3>Software Engineer Intern</h3>
-				<h4>Infraspec</h4>
-				<ul>
-					<li><strong>PXE Boot Raspberry Pi:</strong> Worked on PXE boot setup, networking & automation,
-						developed Bash scripts for streamlined provisioning.</li>
+		<!-- skills -->
+		<section class="section wrap" id="skills">
+			<header class="section-head">
+				<span class="section-index">04</span>
+				<h2 class="section-title">Skills</h2>
+			</header>
 
-					<li><strong>Discord Bot Development:</strong> Built custom Discord bot using JavaScript, improved
-						task management, implemented CI/CD, deployed via Docker container.</li>
+			<div class="section-body">
+				<div class="stack">
+					<div class="stack-group spot reveal" style="--c: var(--c-blue)">
+						<h3>☁️ Cloud &amp; Infrastructure</h3>
+						<ul class="tags">
+							<li>AWS</li><li>Google Cloud</li><li>Amazon S3</li><li>AWS DataSync</li><li>IAM</li>
+							<li>Terraform</li><li>Packer</li><li>Kubernetes</li><li>Helm</li><li>Docker</li>
+						</ul>
+					</div>
+					<div class="stack-group spot reveal" style="--c: var(--c-orange)">
+						<h3>⌨️ Languages</h3>
+						<ul class="tags">
+							<li>Go</li><li>Java</li><li>Python</li><li>JavaScript</li><li>C</li><li>C++</li>
+							<li>SQL</li><li>Bash</li><li>HTML</li><li>CSS</li>
+						</ul>
+					</div>
+					<div class="stack-group spot reveal" style="--c: var(--c-green)">
+						<h3>🧰 Frameworks &amp; Tools</h3>
+						<ul class="tags">
+							<li>Spring Boot</li><li>Django</li><li>Git</li><li>Linux</li><li>GitHub Actions</li>
+							<li>Jenkins</li><li>Microservices</li><li>TDD</li>
+						</ul>
+					</div>
+					<div class="stack-group spot reveal" style="--c: var(--c-pink)">
+						<h3>📈 Monitoring &amp; Systems</h3>
+						<ul class="tags">
+							<li>OpenTelemetry</li><li>Prometheus</li><li>Grafana</li><li>HDFS</li><li>Ceph</li>
+							<li>Alerting</li><li>Root-cause analysis</li><li>Backup &amp; DR</li>
+						</ul>
+					</div>
+				</div>
 
-					<li><strong>Technical Blogging:</strong> Authored blogs on PXE boot & automation setup for Raspberry
-						Pi.</li>
+			</div>
+		</section>
+
+		<!-- terminal playground -->
+		<section class="playground wrap" aria-labelledby="playground-title">
+			<div class="playground-copy">
+				<span class="section-index">~/playground</span>
+				<h2 class="section-title" id="playground-title">Prefer the terminal?</h2>
+				<p>Me too. Type <code>help</code> to look around &mdash; there may be a hidden command or two.</p>
+			</div>
+			<div class="terminal" id="terminal">
+				<div class="terminal-bar">
+					<span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+					<span class="terminal-title">rohit@portfolio: ~</span>
+				</div>
+				<div class="terminal-body" id="terminal-body">
+					<div class="terminal-out" id="terminal-out" aria-live="polite">
+						<p>Welcome! Type <b>help</b> and press Enter.</p>
+					</div>
+					<form class="terminal-line" id="terminal-form" autocomplete="off">
+						<label for="terminal-input" class="prompt">rohit@portfolio:~$</label>
+						<input id="terminal-input" type="text" spellcheck="false" autocapitalize="off"
+							aria-label="Terminal command" />
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- achievements -->
+		<section class="section wrap" id="achievements">
+			<header class="section-head">
+				<span class="section-index">05</span>
+				<h2 class="section-title">Achievements</h2>
+			</header>
+
+			<div class="section-body">
+				<ul class="awards">
+					<li class="award reveal"><span class="award-icon" aria-hidden="true">🏅</span>
+						<div>
+							<h3>AWS Certified Cloud Practitioner</h3>
+							<p>Amazon Web Services certification</p>
+						</div>
+					</li>
+					<li class="award reveal"><span class="award-icon" aria-hidden="true">🏆</span>
+						<div>
+							<h3>Qualified for the IICC Grand Finale</h3>
+							<p>CodeChef 4&#9733;, highest rating 1904, ranked under 8000</p>
+						</div>
+					</li>
+					<li class="award reveal"><span class="award-icon" aria-hidden="true">🚀</span>
+						<div>
+							<h3>Global Rank 256</h3>
+							<p>CodeChef Starters 29, Division 2</p>
+						</div>
+					</li>
 				</ul>
+
+				<div class="profiles">
+					<a class="profile-card spot reveal" href="https://www.codechef.com/users/rohit_500" target="_blank"
+						rel="noopener" style="--c: var(--c-orange)">
+						<span class="profile-top">CodeChef <span class="arrow" aria-hidden="true">&nearr;</span></span>
+						<span class="profile-figure">1904</span>
+						<span class="profile-caption">4&#9733; &middot; max rating</span>
+					</a>
+					<a class="profile-card spot reveal" href="https://codeforces.com/profile/rohit_600?f0a28=1"
+						target="_blank" rel="noopener" style="--c: var(--c-blue)">
+						<span class="profile-top">Codeforces <span class="arrow" aria-hidden="true">&nearr;</span></span>
+						<span class="profile-figure">1219</span>
+						<span class="profile-caption">Pupil &middot; max rating</span>
+					</a>
+					<a class="profile-card spot reveal" href="https://www.hackerrank.com/rohit_500" target="_blank"
+						rel="noopener" style="--c: var(--c-green)">
+						<span class="profile-top">HackerRank <span class="arrow" aria-hidden="true">&nearr;</span></span>
+						<span class="profile-figure">5&#9733;</span>
+						<span class="profile-caption">Problem solving</span>
+					</a>
+				</div>
 			</div>
+		</section>
 
-		</div>
-	</section>
+		<!-- education -->
+		<section class="section wrap" id="education">
+			<header class="section-head">
+				<span class="section-index">06</span>
+				<h2 class="section-title">Education</h2>
+			</header>
 
-	<!-- contact section -->
-	<section class="contact" id="contact">
-		<div class="center">
-			<h1 class="heading">Contact&nbsp<span>Me</span></h1>
-		</div>
-		<div class="contact-form">
-			<form method="post" name="google-sheet" id="myform">
-				<input type="text" name="name" id="fname" placeholder="Your Name" required />
-				<input type="email" name="email" id="femail" placeholder="Email Address" required />
-				<textarea name="description" id="ftex" cols="30" rows="10" placeholder="Description"
-					required></textarea>
-				<input type="submit" name="submit" id="sub1" value="send" class="send-btn" />
-			</form>
-		</div>
-	</section>
-	<footer>
-		<div class="copyright">
-			<p>Copyright @ 2026 Rohit, All Rights Reserved.</p>
+			<div class="section-body">
+				<ol class="list">
+					<li class="list-row reveal">
+						<span class="list-date">Dec 2020 &ndash; May 2024</span>
+						<div class="list-main">
+							<h3>Bachelor of Engineering in Computer Science</h3>
+							<p>KLS Gogte Institute of Technology &middot; Belagavi, Karnataka</p>
+						</div>
+						<span class="list-value"><small>CGPA</small>9.63<small class="of">/10</small></span>
+					</li>
+					<li class="list-row reveal">
+						<span class="list-date">2018 &ndash; 2020</span>
+						<div class="list-main">
+							<h3>Pre-University</h3>
+							<p>SGV Mahesh PU College</p>
+						</div>
+						<span class="list-value"><small>Grade</small>92.6%</span>
+					</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- contact -->
+		<section class="section wrap" id="contact">
+			<header class="section-head">
+				<span class="section-index">07</span>
+				<h2 class="section-title">Contact</h2>
+			</header>
+
+			<div class="section-body">
+				<div class="contact-cards reveal">
+					<button type="button" class="contact-card spot" id="copy-email"
+						data-email="rrohitnagmoti@gmail.com">
+						<span class="contact-label">Email &middot; click to copy</span>
+						<span class="contact-value">rrohitnagmoti@gmail.com</span>
+					</button>
+					<a class="contact-card spot" href="https://www.linkedin.com/in/rohit-nagmoti-6a878a214/" target="_blank"
+						rel="noopener">
+						<span class="contact-label">LinkedIn <span aria-hidden="true">&nearr;</span></span>
+						<span class="contact-value">Rohit Nagmoti</span>
+					</a>
+				</div>
+
+				<form class="contact-form reveal" method="post" name="google-sheet" id="myform">
+					<p class="contact-intro">Or drop a message right here &mdash; I&rsquo;ll get back to you.</p>
+					<div class="field-row">
+						<div class="field">
+							<label for="fname">Name</label>
+							<input type="text" name="name" id="fname" placeholder="Your name" autocomplete="name"
+								required />
+						</div>
+						<div class="field">
+							<label for="femail">Email</label>
+							<input type="email" name="email" id="femail" placeholder="you@example.com"
+								autocomplete="email" required />
+						</div>
+					</div>
+					<div class="field">
+						<label for="ftex">Message</label>
+						<textarea name="description" id="ftex" rows="5" placeholder="What would you like to talk about?"
+							required></textarea>
+					</div>
+					<div class="form-foot">
+						<p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+						<button type="submit" id="sub1" class="btn btn-primary">
+							<span class="btn-label">Send message</span> <span class="arrow"
+								aria-hidden="true">&rarr;</span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer wrap">
+		<p>&copy; 2026 Rohit Nagmoti</p>
+		<div class="footer-links">
+			<a href="https://www.linkedin.com/in/rohit-nagmoti-6a878a214/" target="_blank" rel="noopener">LinkedIn</a>
+			<a href="mailto:rrohitnagmoti@gmail.com">Email</a>
+			<a href="#top">Back to top &uarr;</a>
 		</div>
 	</footer>
 
+	<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-	
-	<script>
-		const scriptURL =
-			"https://script.google.com/macros/s/AKfycbwf8kEMZ6PO4RboP3mJxxgMYMS-pyiM_dQ2oiuccuTpKuvO4Y0BeR0uqz_tXhzMFPQ1/exec";
-	
-		const form = document.forms["google-sheet"];
-		const submitBtn = document.getElementById("sub1");
-	
-		form.addEventListener("submit", (e) => {
-			e.preventDefault();
-	
-			submitBtn.disabled = true;
-			submitBtn.value = "Sending...";
-	
-			fetch(scriptURL, {
-				method: "POST",
-				body: new FormData(form)
-			})
-			.then((response) => {
-				alert("Thanks for Contacting me..! I Will Contact You Soon...");
-				form.reset();
-			})
-			.catch((error) => {
-				console.error("Error!", error.message);
-				alert("Something went wrong. Please try again.");
-			})
-			.finally(() => {
-				submitBtn.disabled = false;
-				submitBtn.value = "Send";
-			});
-		});
-	</script>
-	
-	<script src="https://unpkg.com/scrollreveal"></script>
-
-	<script type="text/javascript" src="javascript/script.js"></script>
+	<script src="javascript/script.js"></script>
 </body>
 
 </html>
